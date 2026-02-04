@@ -33,7 +33,6 @@ const authReducer = (state, action) => {
 };
 
 function AuthProvider({ children }) {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [state, dispatch] = useReducer(authReducer, initialState);
 
   return (

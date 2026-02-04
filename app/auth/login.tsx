@@ -16,10 +16,20 @@ function Login() {
       });
     navigate('/');      
   }
+  const handleLogout=()=>{
+    dispatch({ 
+        type: 'LOGOUT', 
+        payload: { user: null, token: null } 
+      });
+    navigate('/');      
+  }
     return (
-      <div className='button__wrapper w-full'>
-         <button onClick={handleLogin}>
+      <div className='button__wrapper w-full flex gap-4'>
+         <button onClick={handleLogin} >
             {!state.user ? 'Login' : 'Logout'}
+        </button>
+        <button onClick={handleLogout}>
+            {!state.user ? 'Logout' : 'Login'}
         </button>
       </div>
        
