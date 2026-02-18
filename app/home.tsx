@@ -30,6 +30,7 @@ export default function home() {
       <div className='button__wrapper'>
         <button onClick={()=>setCount(prev => Math.max(0, prev - 1))} className={`${darkMode ? 'font' : ''}`}>-</button>
         <button onClick={()=>setCount(count+1)} className={`${darkMode ? 'font' : ''}`}>+</button>
+        <button onClick={()=>setCount(0)} className={`${darkMode ? 'font' : ''}`}>Reset</button>
       </div>
     </div>
   );
