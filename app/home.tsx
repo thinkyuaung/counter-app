@@ -28,7 +28,7 @@ export default function home() {
    <img src={darkMode ? light : dark} alt="theme toggle" onClick={toggleTheme} width="32" height="32" />
       <h1  className={count>0 ? "positive" : count < 0 ? "negative" : null}>{count}</h1>
       <div className='button__wrapper'>
-        <button onClick={()=>setCount(count-1)} className={`${darkMode ? 'font' : ''}`}>-</button>
+        <button onClick={()=>setCount(prev => Math.max(0, prev - 1))} className={`${darkMode ? 'font' : ''}`}>-</button>
         <button onClick={()=>setCount(count+1)} className={`${darkMode ? 'font' : ''}`}>+</button>
       </div>
     </div>
